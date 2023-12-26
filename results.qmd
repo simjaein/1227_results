@@ -1,6 +1,5 @@
 ---
 title: "Text Data Augmentation via ChatGPT"
-author: "심재인"
 format:
   dashboard:
     scrollable: true
@@ -16,6 +15,7 @@ import pandas as pd
 import itables 
 df11 = pd.read_csv('실험결과/실험1/시나리오1.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 df12 = pd.read_csv('실험결과/실험1/시나리오2.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+#---#
 df20a = pd.read_csv('실험결과/실험2/시나리오0a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 df21a = pd.read_csv('실험결과/실험2/시나리오1a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 df21b = pd.read_csv('실험결과/실험2/시나리오1b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
@@ -23,9 +23,24 @@ df22a = pd.read_csv('실험결과/실험2/시나리오2a.csv').rename({'Unnamed:
 df22b = pd.read_csv('실험결과/실험2/시나리오2b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 df23a = pd.read_csv('실험결과/실험2/시나리오3a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 df23b = pd.read_csv('실험결과/실험2/시나리오3b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
-df24a = pd.read_csv('실험결과/실험2/시나리오4a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
-df24b = pd.read_csv('실험결과/실험2/시나리오4b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+#---#
+df30a = pd.read_csv('실험결과/실험3/시나리오0a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df31a = pd.read_csv('실험결과/실험3/시나리오1a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df31b = pd.read_csv('실험결과/실험3/시나리오1b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df32a = pd.read_csv('실험결과/실험3/시나리오2a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df32b = pd.read_csv('실험결과/실험3/시나리오2b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df33a = pd.read_csv('실험결과/실험3/시나리오3a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df33b = pd.read_csv('실험결과/실험3/시나리오3b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df34a = pd.read_csv('실험결과/실험3/시나리오4a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df34b = pd.read_csv('실험결과/실험3/시나리오4b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df35a = pd.read_csv('실험결과/실험3/시나리오5a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df35b = pd.read_csv('실험결과/실험3/시나리오5b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df36a = pd.read_csv('실험결과/실험3/시나리오6a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df36b = pd.read_csv('실험결과/실험3/시나리오6b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df37a = pd.read_csv('실험결과/실험3/시나리오7a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df37b = pd.read_csv('실험결과/실험3/시나리오7b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 ```
+
 
 # 실험1 {orientation="columns" scrolling="true"}
 
@@ -41,12 +56,12 @@ itables.show(df12)
 ```
 
 
-# 실험1 {orientation="columns" scrolling="true"}
+# 실험2 {orientation="columns" scrolling="true"}
 
 ## Column {width=50%}
 
 ```{python}
-#| title: 시나리오1 (without ChatGPT / +40)
+#| title: baseline (without ChatGPT / +0)
 itables.show(df20a)
 ```
 
@@ -55,15 +70,123 @@ itables.show(df20a)
 itables.show(df21a)
 ```
 
+```{python}
+#| title: 시나리오2 (without ChatGPT / +80)
+itables.show(df22a)
+```
+
+```{python}
+#| title: 시나리오3 (without ChatGPT / +120)
+itables.show(df23a)
+```
+
 ## Column {width=50%}
 
 ```{python}
-#| title: 시나리오2 (with ChatGPT / +40)
+#| title: baseline (with ChatGPT / +0)
 itables.show(df20a)
 ```
 
 ```{python}
-#| title: 시나리오2 (with ChatGPT / +40)
+#| title: 시나리오1 (with ChatGPT / +40)
 itables.show(df21b)
+```
+
+```{python}
+#| title: 시나리오2 (with ChatGPT / +80)
+itables.show(df22b)
+```
+
+```{python}
+#| title: 시나리오3 (with ChatGPT / +120)
+itables.show(df23b)
+```
+
+
+# 실험3 {orientation="columns" scrolling="true"}
+
+## Column {width=50%}
+
+```{python}
+#| title: baseline (without ChatGPT / +0)
+itables.show(df30a)
+```
+
+```{python}
+#| title: 시나리오1 (without ChatGPT / +20)
+itables.show(df31a)
+```
+
+```{python}
+#| title: 시나리오2 (without ChatGPT / +40)
+itables.show(df32a)
+```
+
+```{python}
+#| title: 시나리오3 (without ChatGPT / +60)
+itables.show(df33a)
+```
+
+```{python}
+#| title: 시나리오4 (without ChatGPT / +80)
+itables.show(df34a)
+```
+
+```{python}
+#| title: 시나리오5 (without ChatGPT / +100)
+itables.show(df35a)
+```
+
+```{python}
+#| title: 시나리오6 (without ChatGPT / +120)
+itables.show(df36a)
+```
+
+```{python}
+#| title: 시나리오7 (without ChatGPT / +140)
+itables.show(df37a)
+```
+
+
+## Column {width=50%}
+
+```{python}
+#| title: baseline (without ChatGPT / +0)
+itables.show(df30a)
+```
+
+```{python}
+#| title: 시나리오1 (without ChatGPT / +20)
+itables.show(df31b)
+```
+
+```{python}
+#| title: 시나리오2 (without ChatGPT / +40)
+itables.show(df32b)
+```
+
+```{python}
+#| title: 시나리오3 (without ChatGPT / +60)
+itables.show(df33b)
+```
+
+```{python}
+#| title: 시나리오4 (without ChatGPT / +80)
+itables.show(df34b)
+```
+
+```{python}
+#| title: 시나리오5 (without ChatGPT / +100)
+itables.show(df35b)
+```
+
+```{python}
+#| title: 시나리오6 (without ChatGPT / +120)
+itables.show(df36b)
+```
+
+```{python}
+#| title: 시나리오7 (without ChatGPT / +140)
+itables.show(df37b)
 ```
 
