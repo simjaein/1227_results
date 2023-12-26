@@ -1,0 +1,31 @@
+---
+title: "Text Data Augmentation via ChatGPT"
+author: "심재인"
+format: dashboard
+execute: 
+  enabled: true
+  cache: false
+  freeze: false
+  error: true
+---
+
+```{python}
+#| output: false
+import itables 
+df11 = pd.read_csv('실험결과/실험1/시나리오1.csv')
+df12 = pd.read_csv('실험결과/실험1/시나리오2.csv')
+```
+
+# 실험1 {orientation="columns" scrolling="true"}
+
+## Column {width=50%}
+```{python}
+#| title: 시나리오1 (without ChatGPT)
+iables.show(df11)
+```
+## Column {width=50%}
+```{python}
+#| title: 시나리오2 (with ChatGPT)
+iables.show(df12)
+```
+
