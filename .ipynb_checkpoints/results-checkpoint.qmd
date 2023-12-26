@@ -1,16 +1,18 @@
 ---
 title: "Text Data Augmentation via ChatGPT"
 author: "심재인"
-format: dashboard
+format:
+  dashboard:
+    scrollable: true
 execute: 
   enabled: true
   cache: false
   freeze: false
-  error: true
 ---
 
 ```{python}
 #| output: false
+import pandas as pd
 import itables 
 df11 = pd.read_csv('실험결과/실험1/시나리오1.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 df12 = pd.read_csv('실험결과/실험1/시나리오2.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
