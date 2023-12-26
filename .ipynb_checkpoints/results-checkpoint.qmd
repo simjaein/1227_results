@@ -151,42 +151,42 @@ itables.show(df37a)
 ## Column {width=50%}
 
 ```{python}
-#| title: baseline (without ChatGPT / +0)
+#| title: baseline (with ChatGPT / +0)
 itables.show(df30a)
 ```
 
 ```{python}
-#| title: 시나리오1 (without ChatGPT / +20)
+#| title: 시나리오1 (with ChatGPT / +20)
 itables.show(df31b)
 ```
 
 ```{python}
-#| title: 시나리오2 (without ChatGPT / +40)
+#| title: 시나리오2 (with ChatGPT / +40)
 itables.show(df32b)
 ```
 
 ```{python}
-#| title: 시나리오3 (without ChatGPT / +60)
+#| title: 시나리오3 (with ChatGPT / +60)
 itables.show(df33b)
 ```
 
 ```{python}
-#| title: 시나리오4 (without ChatGPT / +80)
+#| title: 시나리오4 (with ChatGPT / +80)
 itables.show(df34b)
 ```
 
 ```{python}
-#| title: 시나리오5 (without ChatGPT / +100)
+#| title: 시나리오5 (with ChatGPT / +100)
 itables.show(df35b)
 ```
 
 ```{python}
-#| title: 시나리오6 (without ChatGPT / +120)
+#| title: 시나리오6 (with ChatGPT / +120)
 itables.show(df36b)
 ```
 
 ```{python}
-#| title: 시나리오7 (without ChatGPT / +140)
+#| title: 시나리오7 (with ChatGPT / +140)
 itables.show(df37b)
 ```
 
