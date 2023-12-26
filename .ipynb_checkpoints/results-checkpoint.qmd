@@ -12,8 +12,8 @@ execute:
 ```{python}
 #| output: false
 import itables 
-df11 = pd.read_csv('실험결과/실험1/시나리오1.csv')
-df12 = pd.read_csv('실험결과/실험1/시나리오2.csv')
+df11 = pd.read_csv('실험결과/실험1/시나리오1.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df12 = pd.read_csv('실험결과/실험1/시나리오2.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 ```
 
 # 실험1 {orientation="columns" scrolling="true"}
@@ -21,11 +21,11 @@ df12 = pd.read_csv('실험결과/실험1/시나리오2.csv')
 ## Column {width=50%}
 ```{python}
 #| title: 시나리오1 (without ChatGPT)
-iables.show(df11)
+itables.show(df11)
 ```
 ## Column {width=50%}
 ```{python}
 #| title: 시나리오2 (with ChatGPT)
-iables.show(df12)
+itables.show(df12)
 ```
 
