@@ -16,6 +16,15 @@ import pandas as pd
 import itables 
 df11 = pd.read_csv('실험결과/실험1/시나리오1.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 df12 = pd.read_csv('실험결과/실험1/시나리오2.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df20a = pd.read_csv('실험결과/실험2/시나리오0a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df21a = pd.read_csv('실험결과/실험2/시나리오1a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df21b = pd.read_csv('실험결과/실험2/시나리오1b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df22a = pd.read_csv('실험결과/실험2/시나리오2a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df22b = pd.read_csv('실험결과/실험2/시나리오2b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df23a = pd.read_csv('실험결과/실험2/시나리오3a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df23b = pd.read_csv('실험결과/실험2/시나리오3b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df24a = pd.read_csv('실험결과/실험2/시나리오4a.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
+df24b = pd.read_csv('실험결과/실험2/시나리오4b.csv').rename({'Unnamed: 0':'Method','Unnamed: 1':'Metrics'},axis=1).set_index(['Method','Metrics'])
 ```
 
 # 실험1 {orientation="columns" scrolling="true"}
@@ -29,5 +38,32 @@ itables.show(df11)
 ```{python}
 #| title: 시나리오2 (with ChatGPT)
 itables.show(df12)
+```
+
+
+# 실험1 {orientation="columns" scrolling="true"}
+
+## Column {width=50%}
+
+```{python}
+#| title: 시나리오1 (without ChatGPT / +40)
+itables.show(df20a)
+```
+
+```{python}
+#| title: 시나리오1 (without ChatGPT / +40)
+itables.show(df21a)
+```
+
+## Column {width=50%}
+
+```{python}
+#| title: 시나리오2 (with ChatGPT / +40)
+itables.show(df20a)
+```
+
+```{python}
+#| title: 시나리오2 (with ChatGPT / +40)
+itables.show(df21b)
 ```
 
